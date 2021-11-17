@@ -43,10 +43,6 @@
   margin-left: 2px;
   padding: 0 4px 0 8px;
   line-height: 100%;
-  max-width: 80%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .basemap.active span {
   background-color: #ffa500a0;

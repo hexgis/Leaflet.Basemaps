@@ -83,7 +83,12 @@ L.Control.Basemaps = L.Control.extend({
             var imgNode = L.DomUtil.create("img", null, basemapNode);
             imgNode.src = url;
             if (d.options && d.options.label) {
-                imgNode.title = d.options.label;
+                basemapNode.title = d.options.label;
+            }
+
+            if (d.options && d.options.tag) {
+                var spanNode = L.DomUtil.create("span", null, basemapNode)
+                spanNode.innerHTML = d.options.tag
             }
 
             L.DomEvent.on(

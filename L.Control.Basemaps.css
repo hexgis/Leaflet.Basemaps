@@ -1,28 +1,49 @@
 .basemaps {
-    padding: 4px;
+  display: flex;
+  flex-direction: row;
+  padding: 4px;
 }
 .basemaps.closed .basemap {
-    display: none;
+  display: none;
 }
 .basemaps.closed .basemap.alt {
-    display: inline-block;
+  display: flex;
 }
 .basemaps.closed .basemap.alt h4 {
-    display: none;
+  display: none;
 }
 
 .basemap {
-    display: inline-block; /* todo: flexbox? */
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
 }
 .basemap.active img {
-    border-color: orange;
-    box-shadow: 2px 2px 4px #000;
+  border-color: orange;
+  box-shadow: 2px 2px 4px #000;
 }
 .basemap img {
-    width: 64px;
-    border: 2px solid #FFF;
-    margin: 0 2px;
-    border-radius: 40px;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.65)
+  width: 64px;
+  border: 2px solid #fff;
+  margin: 0 2px;
+  border-radius: 40px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+}
+
+.basemap span {
+  position: absolute;
+  left: 0;
+  text-align: start;
+  font-weight: bold;
+  font-size: 13px;
+  background-color: #ffffffa0;
+  border-radius: 15px 20px 20px 15px;
+  margin-left: 2px;
+  padding: 0 4px 0 8px;
+  line-height: 100%;
+}
+.basemap.active span {
+  background-color: #ffa500a0;
 }
